@@ -11,7 +11,8 @@ class teams{
 
     public:
         teams(std::string n);
-        void addPlayer(const player& p);
+        void addPlayer(player& p);
+        void removePlayer(player& p);
         void GetPlayers();
         void GetInfo();
 };
