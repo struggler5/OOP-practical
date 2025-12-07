@@ -1,4 +1,5 @@
 #include<iostream>
+#include "matches.h" 
 #include "teams.h" 
 #include "player.h" 
 
@@ -20,5 +21,9 @@ int main(){
     t1.GetInfo();
     t2.GetInfo();
     
-
+    match m1 = match(t1, t2, 0,0);
+    m1.SetTeams(t1,t2);
+    teams winner = m1.getWinner();
+    cout<<"-----------------\n";
+    winner.GetInfo();
 }
