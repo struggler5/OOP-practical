@@ -1,24 +1,24 @@
 #include "round.h"
-#include "teams.h"
-#include "matches.h" 
+#include "team.h"
+#include "match.h" 
 #include <vector> 
 #include<iostream>
 
-    using namespace std;
+using namespace std;
 
-int round::nextCode = 0;
+int Round::nextCode = 0;
 
-round::round():code(nextCode++){
+Round::Round():code(nextCode++){
     code++;
 }
 
-std::vector<teams> round::StartRound(std::vector<teams> List_Teams) {
+std::vector<Teams> Round::startRound(std::vector<Teams> List_Teams) {
     
-    vector<teams> winners;    
+    vector<Teams> winners;    
 
     for(int i=0;i<List_Teams.size();i+=2){
-            match Match = match(List_Teams[i], List_Teams[i+1], 0, 0);
-            winners.push_back(Match.getWinner());
+            Match match = Match(List_Teams[i], List_Teams[i+1], 0, 0);
+            winners.push_back(match.getWinner());
 
         }
 

@@ -1,14 +1,15 @@
 #pragma once 
 #include<string>
-class player{
+class Player{
     private:
         std::string name;
         std::string nickname;
+        std::string studentNumber;
 
     public:
         
-        std::string StudentNumber;
+        std::string getStudentNumber();
         bool inTeam = false;
-        void SetPlayer(std::string nr, std::string n, std::string nk);
-        void GetPlayerInfo();
+        void setPlayer(std::string nr, std::string n, std::string nk);
+        void getPlayerInfo();
 };

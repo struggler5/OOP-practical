@@ -1,14 +1,14 @@
 #pragma once 
-#include "teams.h"
+#include "team.h"
 #include<vector> 
 
-class round{
+class Round{
     private:
         static int nextCode;
         int code;
     public:
-        round();
-        std::vector<teams> StartRound(std::vector<teams> List_Teams);
+        Round();
+        std::vector<Teams> startRound(std::vector<Teams> List_Teams);
 
 
 };
