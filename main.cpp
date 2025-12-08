@@ -2,7 +2,7 @@
 #include "matches.h" 
 #include "teams.h" 
 #include "player.h" 
-
+#include "round.h"
 using namespace std;
 
 
@@ -22,8 +22,13 @@ int main(){
     t2.GetInfo();
     
     match m1 = match(t1, t2, 0,0);
-    m1.SetTeams(t1,t2);
-    teams winner = m1.getWinner();
-    cout<<"-----------------\n";
-    winner.GetInfo();
+    
+    round r1 = round();
+    vector<teams> batch;
+    batch.push_back(t1);
+    batch.push_back(t2);
+    batch = r1.StartRound(batch);
+    batch[0].GetInfo();
+
+
 }
