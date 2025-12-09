@@ -17,7 +17,7 @@ std::vector<Teams> Round::startRound(std::vector<Teams> List_Teams) {
     vector<Teams> winners;    
 
     for(int i=0;i<List_Teams.size();i+=2){
-            Match match = Match(List_Teams[i], List_Teams[i+1], 0, 0);
+            Match match = Match(List_Teams[i], List_Teams[i+1]);
             winners.push_back(match.getWinner());
 
         }

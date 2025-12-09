@@ -7,13 +7,12 @@ class Match{
     private:
         Teams t1;
         Teams t2;
-        std::time_t date;
-        std::time_t time;
+        std::time_t date = 0;
+        std::time_t time = 0;
 
     public:
-        Match(const Teams& team1, const Teams& team2, std::time_t d, std::time_t t): t1(team1), t2(team2), date(d), time(t) {}
+        Match(const Teams& team1, const Teams& team2): t1(team1), t2(team2){}
 
-        void setTeams(Teams team1, Teams team2);
         Teams getWinner();
         void teamsInfo();
         void matchInfo();

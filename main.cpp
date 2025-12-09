@@ -1,5 +1,7 @@
 #include "team.h" 
 #include "player.h" 
+#include "round.h"
+#include "match.h"
 using namespace std;
 
 
@@ -20,15 +22,13 @@ int main(){
 
     t1.removePlayer(p1);
     t1.getInfo();
-    /*
-    Match m1 = Match(t1, t2, 0,0);
-    
+
+    Match m1 = Match(t1, t2);
     Round r1 = Round();
     vector<Teams> batch;
     batch.push_back(t1);
     batch.push_back(t2);
     batch = r1.startRound(batch);
     batch[0].getInfo();
-    */
 
 }

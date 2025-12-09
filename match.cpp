@@ -5,11 +5,6 @@
 using namespace std;
 
 
-void Match::setTeams(Teams team1, Teams team2){
-    t1 = team1;
-    t2 = team2;
-}
-
 Teams Match::getWinner(){
     
     Teams l1[2] = {t1,t2};
