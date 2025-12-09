@@ -6,7 +6,7 @@ using namespace std;
 
 int Teams::nextC = 0;
 Teams::Teams(std::string n): code(nextC++){
-    name = n;
+    name = n + std::to_string(code);
     code++;
 }
 
