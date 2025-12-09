@@ -6,11 +6,10 @@ using namespace std;
 
 
 int main(){
-    Player p1;
-    p1.setPlayer("m81364", "Andrei", "Andre");
+    Player p1 = Player("Andrei", "Andre");
     p1.getPlayerInfo();
-    Player p2;
-    p2.setPlayer("j3671531", "Sandu", "Sand");
+    Player p2 = Player("Sandu", "Alex");
+    p2.getPlayerInfo();
     Teams t1 = Teams("t1");
     t1.addPlayer(p1);
     

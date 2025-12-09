@@ -2,11 +2,15 @@
 #include<iostream>
 using namespace std;
 
-void Player::setPlayer(string nr, string n, string nk){
-    studentNumber = nr;
+int Player::nextId = 0;
+
+Player::Player(std::string n, std::string nk){
     name = n;
     nickname = nk;
+    studentNumber = "k"+ std::to_string(nextId++);
 }
+
+
 
 
 void Player::getPlayerInfo(){

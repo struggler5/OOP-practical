@@ -2,14 +2,14 @@
 #include<string>
 class Player{
     private:
+        static int nextId;
         std::string name;
         std::string nickname;
         std::string studentNumber;
 
     public:
-        
+        Player(std::string n, std::string nk);
         std::string getStudentNumber();
         bool inTeam = false;
-        void setPlayer(std::string nr, std::string n, std::string nk);
         void getPlayerInfo();
 };
