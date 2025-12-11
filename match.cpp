@@ -2,6 +2,8 @@
 #include "match.h" 
 #include "team.h" 
 #include<random> 
+#include<ctime>
+#include<iomanip> 
 using namespace std;
 
 
@@ -15,6 +17,7 @@ Teams Match::getWinner(){
 
 void Match::teamsInfo(){
 
+
     cout<<"Team 1 : \n";
     t1.getInfo();
 
@@ -26,14 +29,8 @@ void Match::teamsInfo(){
 
 
 void Match::matchInfo(){
-    cout<<"Date : "<<date<<" \n Time: "<<time<<"\n -------------------- \n";
+    cout<<"Date : "<<put_time(&date, "%Y-%m-%d")<<endl;
+    cout<<"Time : "<<put_time(&time, "%H-%M")<<endl;
     teamsInfo();
 }
 
-void Match::setDay(std::time_t d){
-    date = d;
-}
-
-void Match::setTime(std::time_t t){
-    time = t;
-}
