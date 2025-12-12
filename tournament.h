@@ -10,9 +10,9 @@ class Tournament {
         static int nextCode;
         int code;
         std::string name;
-        std::time_t startDate;
+        std::tm startDate;
     public:
-        Tournament (int c, const std::string& n, std::time_t sd);
+        Tournament (const std::string& n, std::tm sd);
         Teams startTournament(std::vector<Teams> teams);
         void getTournamentInfo();
 };

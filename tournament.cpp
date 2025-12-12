@@ -6,28 +6,34 @@
 #include <random>
 #include "tournament.h"
 #include "round.h"
+#include<iomanip> 
 using namespace std;
 
 int Tournament::nextCode = 0;
-Tournament::Tournament(int c, const std::string& n, std::time_t sd): code(nextCode++){
+Tournament::Tournament( const std::string& n, std::tm sd): code(nextCode++){
     code++;
     name = n;
     startDate = sd;
 }
 
 Teams Tournament::startTournament (std::vector<Teams> T) {
-    std::mt19937 g(std::time(nullptr));
-    std::shuffle(T.begin(), T.end(), g);
-
-    while (T.size() > 1) {
-        //startRound();
-
+    mt19937 g(std::time(nullptr));
+    shuffle(T.begin(), T.end(), g);
+    
+    tm hour;
+    hour.tm_hour = 8;
+    vector<Round> R;
+    for(int i = 0;T.size() > 1;i++) {
+    R.push_back(Round());
+    T = R[i].startRound(T,startDate, hour);
+    
+        
     }
     return T[0];
 }
 
 void Tournament::getTournamentInfo() {
-    std::cout << "Tournament Code: " << code << std::endl;
-    std::cout << "Tournament Name: " << name << std::endl;
-    std::cout << "Start Date: " << std::ctime(&startDate) << std::endl;
+    cout << "Tournament Code: " << code << endl;
+    cout << "Tournament Name: " << name << endl;
+    cout << "Start Date: " << put_time(&startDate, "%Y-%m-%d")<< endl;
 }

@@ -1,4 +1,5 @@
 #include "team.h" 
+#include "tournament.h"
 #include "player.h" 
 #include "round.h"
 #include "match.h"
@@ -20,22 +21,31 @@ int main(){
 
 
     Player p1 = Player("Andrei", "Andre");
-    p1.getPlayerInfo();
     Player p2 = Player("Sandu", "Alex");
-    p2.getPlayerInfo();
-    Teams t1 = Teams("t1");
+    Player p3 = Player("Lala", "ion");
+    Player p4 = Player("sasa", "A");
+    Teams t1 = Teams("t0");
     t1.addPlayer(p1);
     
-    Teams t2 = Teams("t2");
+    Teams t2 = Teams("t0");
     t2.addPlayer(p2);
 
+    Teams t3 = Teams("T0");
+    t3.addPlayer(p3);
+
+    Teams t4 = Teams("T0");
+    t4.addPlayer(p4);
 
     t1.removePlayer(p1);
 
-    Match m1 = Match(t1, t2, d ,t);
-    Round r1 = Round();
     vector<Teams> batch;
     batch.push_back(t1);
     batch.push_back(t2);
-    r1.startRound(batch, d,t);
+    batch.push_back(t3);
+    batch.push_back(t4);
+ //   r1.startRound(batch, d,t);
+    Tournament tor1 = Tournament("T1", d);
+    cout<<"----------------------------------\n";
+    tor1.startTournament(batch).getInfo();
+    tor1.getTournamentInfo();
 }
