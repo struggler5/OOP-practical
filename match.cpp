@@ -24,11 +24,11 @@ void Match::teamsInfo(){
     cout<<"--------------------\n";
     cout<<"Team 2 : \n";
     t2.getInfo();
-    cout<<"--------------------\n";
 }
 
 
 void Match::matchInfo(){
+    cout<<"--------------------\n";
     cout<<"Date : "<<put_time(&date, "%Y-%m-%d")<<endl;
     cout<<"Time : "<<put_time(&time, "%H-%M")<<endl;
     teamsInfo();

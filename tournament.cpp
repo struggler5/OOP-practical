@@ -16,20 +16,29 @@ Tournament::Tournament( const std::string& n, std::tm sd): code(nextCode++){
     startDate = sd;
 }
 
-Teams Tournament::startTournament (std::vector<Teams> T) {
-    mt19937 g(std::time(nullptr));
-    shuffle(T.begin(), T.end(), g);
-    
-    tm hour;
-    hour.tm_hour = 8;
-    vector<Round> R;
-    for(int i = 0;T.size() > 1;i++) {
-    R.push_back(Round());
-    T = R[i].startRound(T,startDate, hour);
-    
+void Tournament::startTournament (std::vector<Teams> T) {
+    if((T.size() == 2 || !(T.size() % 4)) && T.size() <=20){
+        mt19937 g(std::time(nullptr));
+        shuffle(T.begin(), T.end(), g);
         
+        tm hour;
+        hour.tm_hour = 8;
+        vector<Round> R;
+        for(int i = 0;T.size() > 1;i++) {
+            cout<<"ROUND : "<<i+1<<endl;
+        R.push_back(Round());
+        T = R[i].startRound(T,startDate, hour);
+        startDate.tm_mday++;
+        cout<<"---------------------------------\n";
+        cout<<"---------------------------------\n";
+        }
+
+            cout<<"---------------------------------\n";
+            cout<<"---------------------------------\n";
+            cout<<"WINNER: \n";
+            T[0].getInfo();
     }
-    return T[0];
+    else cout<<"Insert valid number of teams \n";
 }
 
 void Tournament::getTournamentInfo() {
