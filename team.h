@@ -15,4 +15,5 @@ class Teams{
         void removePlayer(Player& p);
         void getPlayers();
         void getInfo();
+        std::string getName();
 };

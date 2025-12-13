@@ -43,6 +43,13 @@ int main(){
     batch.push_back(t3);
     batch.push_back(t4);
  //   r1.startRound(batch, d,t);
+
+
+    for(int i =0;i<batch.size();i++){
+        batch[i].getInfo();
+    cout<<"----------------------------------\n";
+    }
+
     Tournament tor1 = Tournament("T1", d);
     tor1.getTournamentInfo();
     cout<<"----------------------------------\n";

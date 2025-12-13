@@ -33,16 +33,14 @@ void Tournament::startTournament (std::vector<Teams> T) {
         cout<<"---------------------------------\n";
         }
 
-            cout<<"---------------------------------\n";
-            cout<<"---------------------------------\n";
-            cout<<"WINNER: \n";
+            cout<<"TOURNAMENT WINNER: \n";
             T[0].getInfo();
     }
     else cout<<"Insert valid number of teams \n";
 }
 
 void Tournament::getTournamentInfo() {
-    cout << "Tournament Code: " << code << endl;
     cout << "Tournament Name: " << name << endl;
+    cout << "Tournament Code: " << code << endl;
     cout << "Start Date: " << put_time(&startDate, "%Y-%m-%d")<< endl;
 }

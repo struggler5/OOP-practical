@@ -6,8 +6,7 @@ using namespace std;
 
 int Teams::nextC = 0;
 Teams::Teams(std::string n): code(nextC++){
-    name = n + std::to_string(code);
-    code++;
+    name = n ;
 }
 
 void Teams::addPlayer(Player& p){
@@ -34,5 +33,11 @@ void Teams::getPlayers(){
 void Teams::getInfo(){
     cout<<"name : "<<name<<endl;
     cout<<"code : "<<code<<endl;
-    cout<<"nr of players : "<<players.size()<<endl;
+    cout<<"nr of players : "<<players.size()<<"\n \n";
+    cout<<" Players: \n";
+    getPlayers();
+}
+
+string Teams::getName(){
+    return name;
 }

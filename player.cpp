@@ -14,8 +14,8 @@ Player::Player(std::string n, std::string nk){
 
 
 void Player::getPlayerInfo(){
-    cout<<"Strudent number: "<< studentNumber <<endl;
     cout<<"Name : "<<name<<endl;
+    cout<<"Strudent number: "<< studentNumber <<endl;
     cout<<"Nickname : "<<nickname<<endl;
 }
 

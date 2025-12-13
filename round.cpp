@@ -18,9 +18,12 @@ std::vector<Teams> Round::startRound(std::vector<Teams> List_Teams, std::tm date
     vector<Teams> winners;    
 
     for(int i=0;i<List_Teams.size();i+=2){
-        cout<<"MATCH : \n";
+        cout<<"MATCH : ";
             Match match = Match(List_Teams[i], List_Teams[i+1],date, time);
+            match.teamsInfo();
             match.matchInfo();
+            cout<<endl;
+            cout<<"winner: "<<match.getWinner().getName()<<"\n \n";
             winners.push_back(match.getWinner());
 
             time.tm_hour++;
