@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-int Player::nextId = 0;
+int Player::nextId = 1;
 
 Player::Player(std::string n, std::string nk){
     name = n;
