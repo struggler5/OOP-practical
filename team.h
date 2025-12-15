@@ -4,7 +4,7 @@
 #include<vector>
 class Team{
     private:
-        static int nextC;
+        static int nextCode;
         int code;
         std::string name;
         std::vector<Player> players;

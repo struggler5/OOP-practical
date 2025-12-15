@@ -4,8 +4,8 @@
 using namespace std;
 
 
-int Team::nextC = 0;
-Team::Team(std::string n): code(nextC++){
+int Team::nextCode = 0;
+Team::Team(std::string n): code(nextCode++){
     name = n ;
 }
 
