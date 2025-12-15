@@ -2,7 +2,7 @@
 #include "player.h"
 #include<string>
 #include<vector>
-class Teams{
+class Team{
     private:
         static int nextC;
         int code;
@@ -10,7 +10,7 @@ class Teams{
         std::vector<Player> players;
 
     public:
-        Teams(std::string n);
+        Team(std::string n);
         void addPlayer(Player& p);
         void removePlayer(Player& p);
         void getPlayers();

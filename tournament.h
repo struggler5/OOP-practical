@@ -13,6 +13,6 @@ class Tournament {
         std::tm startDate;
     public:
         Tournament (const std::string& n, std::tm sd);
-        void startTournament(std::vector<Teams> teams);
+        void startTournament(std::vector<Team> teams);
         void getTournamentInfo();
 };

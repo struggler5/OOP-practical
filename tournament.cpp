@@ -16,7 +16,7 @@ Tournament::Tournament( const std::string& n, std::tm sd): code(nextCode++){
     startDate = sd;
 }
 
-void Tournament::startTournament (std::vector<Teams> T) {
+void Tournament::startTournament (std::vector<Team> T) {
     if((T.size() == 2 || !(T.size() % 4)) && T.size() <=20){
         mt19937 g(std::time(nullptr));
         shuffle(T.begin(), T.end(), g);

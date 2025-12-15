@@ -8,7 +8,7 @@ class Round{
         int code;
     public:
         Round();
-        std::vector<Teams> startRound(std::vector<Teams> List_Teams,std::tm date, std::tm time);
+        std::vector<Team> startRound(std::vector<Team> List_Teams,std::tm date, std::tm time);
 
 
 };

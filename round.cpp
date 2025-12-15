@@ -13,9 +13,9 @@ Round::Round():code(nextCode++){
     code++;
 }
 
-std::vector<Teams> Round::startRound(std::vector<Teams> List_Teams, std::tm date, std::tm time) {
+std::vector<Team> Round::startRound(std::vector<Team> List_Teams, std::tm date, std::tm time) {
     
-    vector<Teams> winners;    
+    vector<Team> winners;    
 
     for(int i=0;i<List_Teams.size();i+=2){
         cout<<"MATCH : ";

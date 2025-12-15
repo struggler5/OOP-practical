@@ -7,9 +7,9 @@
 using namespace std;
 
 
-Teams Match::getWinner(){
+Team Match::getWinner(){
     
-    Teams l1[2] = {t1,t2};
+    Team l1[2] = {t1,t2};
 
     return l1[rand()%2];
 }
