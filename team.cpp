@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int Team::nextCode = 0;
+int Team::nextCode = 1;
 Team::Team(std::string n): code(nextCode++){
     name = n ;
 }

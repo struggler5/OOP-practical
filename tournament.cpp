@@ -9,9 +9,8 @@
 #include<iomanip> 
 using namespace std;
 
-int Tournament::nextCode = 0;
+int Tournament::nextCode = 1;
 Tournament::Tournament( const std::string& n, std::tm sd): code(nextCode++){
-    code++;
     name = n;
     startDate = sd;
 }

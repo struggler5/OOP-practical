@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int Round::nextCode = 0;
+int Round::nextCode = 1;
 
 Round::Round():code(nextCode++){
     code++;
