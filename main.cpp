@@ -24,18 +24,28 @@ int main(){
     Player p2 = Player("Sandu", "Alex");
     Player p3 = Player("Lala", "ion");
     Player p4 = Player("sasa", "A");
+    Player p5 = Player("marko", "B");
+    Player p6 = Player("ivan", "C");
+    Player p7 = Player("luka", "A");
+    Player p8 = Player("nikola", "B");
+
     Team t1 = Team("t0");
     t1.addPlayer(p1);
-    
+    t1.addPlayer(p5);   
+
     Team t2 = Team("t1");
     t2.addPlayer(p2);
+    t2.addPlayer(p6);   
 
     Team t3 = Team("T0");
     t3.addPlayer(p3);
+    t3.addPlayer(p7);
+
+
 
     Team t4 = Team("T1");
     t4.addPlayer(p4);
-
+    t4.addPlayer(p8);
 
     vector<Team> batch;
     batch.push_back(t1);
