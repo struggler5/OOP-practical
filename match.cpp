@@ -1,8 +1,5 @@
 #include<iostream>
-#include "match.h" 
-#include "team.h" 
-#include<random> 
-#include<ctime>
+#include "templates.h"
 #include<iomanip> 
 using namespace std;
 

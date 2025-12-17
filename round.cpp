@@ -1,6 +1,4 @@
-#include "round.h"
-#include "team.h"
-#include "match.h" 
+#include "templates.h"
 #include <vector> 
 #include<iostream>
 #include<ctime> 

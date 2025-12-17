@@ -4,8 +4,7 @@
 #include <ctime>
 #include <algorithm>
 #include <random>
-#include "tournament.h"
-#include "round.h"
+#include "templates.h"
 #include<iomanip> 
 using namespace std;
 

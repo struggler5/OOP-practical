@@ -1,4 +1,4 @@
-#include "player.h"
+#include "templates.h"
 #include<iostream>
 using namespace std;
 

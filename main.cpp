@@ -1,8 +1,4 @@
-#include "team.h" 
-#include "tournament.h"
-#include "player.h" 
-#include "round.h"
-#include "match.h"
+#include "templates.h"
 using namespace std;
 
 
